@@ -14,6 +14,10 @@ if [ -d "/var/okteto/cloudbin" ]; then
         fi
 fi
 
+if [ -d "/var/okteto/hooks/start.sh" ]; then
+  /var/okteto/hooks/start.sh
+done
+
 remote=""
 reset=""
 verbose="--verbose=false"
